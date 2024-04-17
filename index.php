@@ -18,13 +18,23 @@
 
   <div id="app">
 
-    <ul class="list-group list-group-numbered">
-      <li class="list-group-item" v-for="(disk, index) in disks">
-        <span>
-          {{ disk }}
-        </span>
-      </li>
-    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col" v-for="(disk, index) in disks">
+          <div class="card">
+            <img class="card-img-top" :src="disk.poster" alt="Title" />
+            <div class="card-body">
+              <h4 class="card-title">{{disk.author + ' - ' + disk.title}}</h4>
+              <div class="description">
+                <p>{{disk.genre}}</p>
+                <p>{{disk.year}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
   </div>
 
