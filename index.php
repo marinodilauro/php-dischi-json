@@ -24,8 +24,8 @@
           <div class="card rounded-3">
             <img class="card-img-top px-5 pt-4" :src="disk.poster" alt="Title" />
             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <h4 class="card-title">{{disk.title}}</h4>
-              <p>{{disk.author}}</p>
+              <h4 class="card-title">{{manageTitleSingleQuote(index)}}</h4>
+              <p>{{manageAuthorSingleQuote(index)}}</p>
               <div class="disk_year">
                 <p><strong>{{disk.year}}</strong></p>
               </div>

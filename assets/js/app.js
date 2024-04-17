@@ -7,6 +7,20 @@ createApp({
       apiURL: 'api.php'
     }
   },
+  methods: {
+    manageTitleSingleQuote(i) {
+
+      const chars = { '"': "'" };
+      return this.disks[i].title.replace(/["]/g, match => chars[match]);
+
+    },
+    manageAuthorSingleQuote(i) {
+
+      const chars = { '"': "'" };
+      return this.disks[i].author.replace(/["]/g, match => chars[match]);
+
+    }
+  },
   mounted() {
 
     // Perform the request to the API
