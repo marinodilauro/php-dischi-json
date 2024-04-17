@@ -6,19 +6,23 @@
 
 body {
   background-color: rgb(29, 45, 60);
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
+
+
 
 #header {
   background-color: rgb(17, 32, 48);
   gap: 60rem;
 
   .navbar {
-
     .navbar-brand {
-
       img {
         max-width: 150px;
       }
+
     }
 
     .search_bar {
@@ -63,9 +67,7 @@ body {
           transform: translate(-50%, -50%);
 
           .card-img-top {
-
             max-width: 500px;
-
           }
 
           /* Close button style */

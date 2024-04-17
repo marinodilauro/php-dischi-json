@@ -11,6 +11,11 @@
   <!-- Fontawesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
   <!-- CSS link -->
   <link href='./assets/css/style.css' rel='stylesheet'>
 
@@ -39,17 +44,23 @@
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
 
               <li class="nav-item">
-                <a class="nav-link active" href="index.php" aria-current="page">Home
+                <a class="nav-link active text-white-50 fw-bold" href="index.php" aria-current="page">
+                  <i class="fa-solid fa-house text-white-50 me-1"></i>
+                  Home
                   <span class="visually-hidden">(current)</span></a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="about.php" aria-current="page">Playlist
+                <a class="nav-link active text-white-50 fw-bold" href="about.php" aria-current="page">
+                  <i class="fa-solid fa-list-ul text-white-50 me-1"></i>
+                  Playlist
                   <span class="visually-hidden">(current)</span></a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="about.php" aria-current="page">Cerca
+                <a class="nav-link active text-white-50 fw-bold" href="about.php" aria-current="page">
+                  <i class="fa-solid fa-magnifying-glass text-white-50 me-1"></i>
+                  Cerca
                   <span class="visually-hidden">(current)</span></a>
               </li>
 
@@ -68,6 +79,7 @@
 
           <div class="col m-0" v-for="(disk, index) in disks">
 
+            <!-- Card -->
             <div class="card rounded-3" @click="openCardModal(index)">
 
               <img class="card-img-top px-5 pt-4" :src="disk.poster" alt="Title" />
@@ -86,6 +98,7 @@
 
             </div>
 
+            <!-- Modal -->
             <div class="modal" :class="{'isOpen': disk.isOpen}">
 
               <div class="card d-flex flex-column justify-content-center align-items-center border-0 rounded-3">
@@ -97,6 +110,10 @@
                   <h4 class="card-title">{{manageTitleSingleQuote(index)}}</h4>
 
                   <p>{{manageAuthorSingleQuote(index)}}</p>
+
+                  <div class="disk_genre">
+                    <p>{{disk.genre}}</p>
+                  </div>
 
                   <div class="disk_year">
                     <p><strong>{{disk.year}}</strong></p>
