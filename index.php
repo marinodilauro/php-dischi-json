@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap CSS link -->
-  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- CSS link -->
   <link href='./assets/css/style.css' rel='stylesheet'>
 
@@ -18,16 +17,17 @@
 
   <div id="app">
 
-    <div class="container">
-      <div class="row">
-        <div class="col" v-for="(disk, index) in disks">
-          <div class="card">
-            <img class="card-img-top" :src="disk.poster" alt="Title" />
-            <div class="card-body">
-              <h4 class="card-title">{{disk.author + ' - ' + disk.title}}</h4>
-              <div class="description">
-                <p>{{disk.genre}}</p>
-                <p>{{disk.year}}</p>
+    <div class="container my-5">
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-5">
+
+        <div class="col m-0" v-for="(disk, index) in disks">
+          <div class="card rounded-3">
+            <img class="card-img-top px-5 pt-4" :src="disk.poster" alt="Title" />
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+              <h4 class="card-title">{{disk.title}}</h4>
+              <p>{{disk.author}}</p>
+              <div class="disk_year">
+                <p><strong>{{disk.year}}</strong></p>
               </div>
             </div>
           </div>
