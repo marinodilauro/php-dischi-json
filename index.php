@@ -17,24 +17,70 @@
 
   <div id="app">
 
-    <div class="container my-5">
-      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-5">
+    <header id="header">
 
-        <div class="col m-0" v-for="(disk, index) in disks">
-          <div class="card rounded-3">
-            <img class="card-img-top px-5 pt-4" :src="disk.poster" alt="Title" />
-            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-              <h4 class="card-title">{{manageTitleSingleQuote(index)}}</h4>
-              <p>{{manageAuthorSingleQuote(index)}}</p>
-              <div class="disk_year">
-                <p><strong>{{disk.year}}</strong></p>
+
+
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container">
+
+          <a class="navbar-brand" href="#">
+            <img src="./assets/img/logo.svg" alt="">
+          </a>
+
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" href="index.php" aria-current="page">Home
+                  <span class="visually-hidden">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="about.php" aria-current="page">Playlist
+                  <span class="visually-hidden">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="about.php" aria-current="page">Cerca
+                  <span class="visually-hidden">(current)</span></a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <main id="main">
+
+      <div class="container">
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-5 my-3">
+
+          <div class="col m-0" v-for="(disk, index) in disks">
+            <div class="card rounded-3">
+              <img class="card-img-top px-5 pt-4" :src="disk.poster" alt="Title" />
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <h4 class="card-title">{{manageTitleSingleQuote(index)}}</h4>
+                <p>{{manageAuthorSingleQuote(index)}}</p>
+                <div class="disk_year">
+                  <p><strong>{{disk.year}}</strong></p>
+                </div>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
-    </div>
+
+    </main>
 
   </div>
 

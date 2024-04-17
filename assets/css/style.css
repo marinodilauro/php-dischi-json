@@ -8,14 +8,44 @@ body {
   background-color: rgb(29, 45, 60);
 }
 
-.row {
+#header {
+  background-color: rgb(17, 32, 48);
+  gap: 60rem;
 
-  .col {
-    padding: 2.5rem;
+  .navbar {
+
+
+    .navbar-brand {
+
+      img {
+        max-width: 150px;
+      }
+    }
+
+    .search_bar {
+      padding: 2rem 0 2rem 2rem;
+    }
   }
+}
 
-  .card {
-    background-color: rgb(17, 32, 48);
-    color: white;
+#main {
+
+  .row {
+
+    .col {
+      padding: 2.5rem;
+    }
+
+    .card {
+      background-color: rgb(17, 32, 48);
+      color: white;
+      transition: transform ease-out 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        z-index: 99999;
+      }
+    }
   }
 }
