@@ -18,7 +18,13 @@
 
   <div id="app">
 
-
+    <ul class="list-group list-group-numbered">
+      <li class="list-group-item" v-for="(disk, index) in disks">
+        <span>
+          {{ disk }}
+        </span>
+      </li>
+    </ul>
 
   </div>
 

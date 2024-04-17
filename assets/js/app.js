@@ -13,7 +13,11 @@ createApp({
     axios.get(this.apiURL)
       .then((result) => {
         console.log(result);
+        this.disks = result.data;
       }
       )
+      .catch((err) => {
+        console.log(err.message);
+      })
   }
 }).mount('#app')
