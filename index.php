@@ -44,21 +44,21 @@
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
 
               <li class="nav-item">
-                <a class="nav-link active text-white-50 fw-bold" href="index.php" aria-current="page">
+                <a class="nav-link active text-white-50 fw-bold" href="#" aria-current="page">
                   <i class="fa-solid fa-house text-white-50 me-1"></i>
                   Home
                   <span class="visually-hidden">(current)</span></a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active text-white-50 fw-bold" href="about.php" aria-current="page">
+                <a class="nav-link active text-white-50 fw-bold" href="#" aria-current="page">
                   <i class="fa-solid fa-list-ul text-white-50 me-1"></i>
                   Playlist
                   <span class="visually-hidden">(current)</span></a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active text-white-50 fw-bold" href="about.php" aria-current="page">
+                <a class="nav-link active text-white-50 fw-bold" href="#" aria-current="page">
                   <i class="fa-solid fa-magnifying-glass text-white-50 me-1"></i>
                   Cerca
                   <span class="visually-hidden">(current)</span></a>
